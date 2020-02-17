@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>cyberspace</title>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+
+  </head>
+  <body>
+
+  <a-scene>
+
+    <a-assets>
+      <img id="ski" src="images/ski.jpg">
+      <img id="scuba" src="images/scubas.jpg">
+      <img id="hike" src="images/hikes.jpg">
+      <img id="fish" src="images/fish.jpg">
+      <img id="volleyball" src="images/volleyball.jpg">
+      <img id="waterfall" src="images/waterfall.jpg">
+      <img id="ballons" src="images/ballons.jpg">
+      <img id="paddle" src="images/paddle.jpg">
+      <img id="numbers" src="images/numbers.gif">
+    </a-assets>
+
+    <a-sky id="bg" src="#numbers"></a-sky>
+
+    <a-entity id="sel1" class="sphere"
+        geometry="primitive: sphere; radius: 0.25;"
+        material="src: #ski; color: grey;"
+        event-set__1="_event: mouseenter; material.color: white;"
+        event-set__2="_event: mouseleave; material.color: grey;"
+        event-set__3="_event: mouseenter; _target: #bg; src: #ski"
+        position="0 1.25 -2"></a-entity>
+
+    <a-entity id="sel2" class="sphere"
+        geometry="primitive: sphere; radius: 0.25;"
+        material="src: #scuba; color: grey;"
+        event-set__1="_event: mouseenter; material.color: white;"
+        event-set__2="_event: mouseleave; material.color: grey;"
+        event-set__3="_event: mouseenter; _target: #bg; src: #scuba"
+        position="-.181 2.466 -2"></a-entity>
+
+    <a-entity id="sel3" class="sphere"
+        geometry="primitive: sphere; radius: 0.25;"
+        material="src: #hike; color: grey;"
+        event-set__1="_event: mouseenter; material.color: white;"
+        event-set__2="_event: mouseleave; material.color: grey;"
+        event-set__3="_event: mouseenter; _target: #bg; src: #hike"
+        position="-1.279 1.9 -2"></a-entity>
+
+    <a-entity id="sel3" class="sphere"
+        geometry="primitive: sphere; radius: 0.25;"
+        material="src: #fish; color: grey;"
+        event-set__1="_event: mouseenter; material.color: white;"
+        event-set__2="_event: mouseleave; material.color: grey;"
+        event-set__3="_event: mouseenter; _target: #bg; src: #fish"
+        position="1.082 1.9 -2"></a-entity>
+
+    <a-entity id="sel2" class="sphere"
+        geometry="primitive: sphere; radius: 0.25;"
+        material="src: #volleyball; color: grey;"
+        event-set__1="_event: mouseenter; material.color: white;"
+        event-set__2="_event: mouseleave; material.color: grey;"
+        event-set__3="_event: mouseenter; _target: #bg; src: #volleyball"
+        position="1.267 3.098 -2"></a-entity>
+
+
+    <a-entity id="sel2" class="sphere"
+        geometry="primitive: sphere; radius: 0.25;"
+        material="src: #waterfall; color: grey;"
+        event-set__1="_event: mouseenter; material.color: white;"
+        event-set__2="_event: mouseleave; material.color: grey;"
+        event-set__3="_event: mouseenter; _target: #bg; src: #waterfall"
+        position="3.239 1.9 -2"></a-entity>
+
+    <a-entity id="sel2" class="sphere"
+        geometry="primitive: sphere; radius: 0.25;"
+        material="src: #ballons; color: grey;"
+        event-set__1="_event: mouseenter; material.color: white;"
+        event-set__2="_event: mouseleave; material.color: grey;"
+        event-set__3="_event: mouseenter; _target: #bg; src: #ballons"
+        position="2.850 3.098 -2"></a-entity>
+
+
+
+    <a-entity id="sel2" class="sphere"
+        geometry="primitive: sphere; radius: 0.25;"
+        material="src: #paddle; color: grey;"
+        event-set__1="_event: mouseenter; material.color: white;"
+        event-set__2="_event: mouseleave; material.color: grey;"
+        event-set__3="_event: mouseenter; _target: #bg; src: #paddle"
+        position="-0.839 3.456 -2"></a-entity>
+
+
+    <a-entity camera look-controls position="0 1.75 0">
+        <a-cursor color="red"
+          event-set__1="_event: mouseenter; color: springgreen"
+          event-set__2="_event: mouseleave; color: red"
+          raycaster="objects: .sphere"></a-cursor>
+        </a-entity>
+
+  </a-scene>
+
+
+  </body>
+</html>
